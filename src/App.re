@@ -32,8 +32,6 @@ let comPlay = (actualCode) => {
     (Human, actualCode, play([], actualCode, firstGuess, codes));
 };
 
-/* IMPORTANT TODO BREAKS ON ORANGE GREEN YELLOW RED */
-
 let make = (_children) => {
     ...component,
 
