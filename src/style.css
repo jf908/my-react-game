@@ -1,0 +1,156 @@
+* { box-sizing: border-box; }
+html, body { width: 100%; height: 100%; }
+h2 { margin: 0; }
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    font-family: "Lato", sans-serif;
+    font-size: 32px;
+}
+
+#error {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    background: rgba(255, 0, 0, .5);
+    opacity: 0;
+    transition: opacity .5s;
+}
+
+#login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .2);
+    text-align: center;
+    width: 100%;
+    max-width: 700px;
+    height: 50%;
+}
+
+#connect {
+    display: flex;
+    padding: 30px;
+}
+
+#game {
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.turn {
+    padding: 10px;
+}
+
+.board {
+    flex: 1;
+    overflow-y: scroll;
+    border-top: 1px solid rgba(0, 0, 0, .2);
+    border-bottom: 1px solid rgba(0, 0, 0, .2);
+}
+
+.board .message {
+    padding: 30px 0;
+}
+
+.peg-input-container {
+    padding: 5px 0;
+}
+.peg-input {
+    display: inline-block;
+}
+
+.peg-empty {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    line-height: 1em;
+    margin: 0 5px;
+    background: rgba(0, 0, 0, .2);
+    border-radius: 50%;
+    vertical-align: bottom;
+}
+
+.peg-turn {
+    display: inline-block;
+}
+.peg-turn .peg {
+    margin: 0 5px;
+}
+
+.peg-turn .marker {
+    display: inline-block;
+    width: .5em;
+    height: .5em;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+
+.pegs {
+    padding: 20px 0;
+    user-select: none;
+}
+.pegs .peg {
+    
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+.peg {
+    width: 1em;
+    height: 1em;
+    line-height: 1em;
+    margin: 0 5px;
+    display: inline-block;
+    vertical-align: bottom;
+}
+
+.peg.a, .peg.b, .peg.c, .peg.d, .peg.e, .peg.f {
+    color: transparent;
+    border-radius: 50%;
+}
+.peg.a { background: #FF4136; }
+.peg.b { background: #FF851B; }
+.peg.c { background: #FFDC00; }
+.peg.d { background: #2ECC40; }
+.peg.e { background: #0074D9; }
+.peg.f { background: #B10DC9; }
+.black.marker { background: black; }
+.white.marker { background: #e3e3e3; box-shadow: 0 0 1px rgba(0, 0, 0, .4); }
+
+input, button {
+    -webkit-appearance: none;
+    flex: 1;
+    font-size: 1em;
+    font-family: inherit;
+    border: 1px solid rgba(0, 0, 0, .2);
+    border-radius: 2px;
+    padding: 10px 20px;
+    min-width: 0;
+}
+input[type="submit"], button {
+    background: 0;
+    flex: 0 1 auto;
+}
+.clear, .submit {
+    font-size: 0.5em;
+    padding: 0 5px;
+    vertical-align: bottom;
+    line-height: 2em;
+    width: 5em;
+}
